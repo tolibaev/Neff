@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+@import "./modules/reset";
+// @import "./modules/fonts";
+
+//=============================================================================================================================================
+@import "./modules/vars";
+
+$maxWidthContainer: 1216;
+$containerPadding: 20;
+$maxWidthLayout: 1920;
+
+@import "./modules/mixins";
+
+//=============================================================================================================================================
+
+body {
+	font-family: $fontFamily, Arial, Helvetica, sans-serif;
+	color: $color;
+	// @include adaptiveValue(font-size, 20, 16, $maxWidthContainer, $mobile);
+}
+
+@import "./modules/containers";
+@import "./modules/base";
+@import "./modules/fragments";
+// @import "./modules/popup";
+// @import "./modules/dropdown";
+//=============================================================================================================================================
+@import "./blocks/header";
+
+@import "./blocks/footer";

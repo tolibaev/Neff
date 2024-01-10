@@ -1,0 +1,29 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color: rgba($color: #000000, $alpha: 0.8);
+	overflow-y: auto;
+	overflow-x: hidden;
+	filter: opacity(0);
+	visibility: hidden;
+	transition:
+		filter 0.8s,
+		visibility 0.8s;
+	z-index: 100;
+	&._open {
+		filter: opacity(1);
+		visibility: visible;
+	}
+	// .popup__body
+	&__body {
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: toRem(30) toRem(15);
+	}
+}

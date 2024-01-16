@@ -1,58 +1,38 @@
-// import Swiper from 'swiper';
+'use strict';
 
-// import {Autoplay, Navigation, Pagination} from 'swiper/modules';
+import Swiper from 'swiper';
 
-// import 'swiper/css';
-// import 'swiper/css/autoplay';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import {Autoplay, Navigation, Pagination} from 'swiper/modules';
 
-// function swiperConfigurations(selector) {
-//   if (selector) {
-//     new Swiper(selector, {
-//       modules: [Autoplay, Navigation, Pagination],
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-//       navigation: {
-//         nextEl: '.slider__btn--right',
-//         prevEl: '.slider__btn--left',
-//       },
-//       pagination: {
-//         el: '.slider__bar',
-//         clickable: true,
-//       },
-//       autoplay: {
-//         delay: 1500,
-//         disableOnInteraction: false,
-//       },
-//       loop: true,
-//       speed: 1000,
-//       slidesPerView: 3,
-//       spaceBetween: 20,
-//       autoHeight: true,
-//       breakpoints: {
-//         1024: {
-//           spaceBetween: 20,
-//           slidesPerView: 3,
-//         },
-//         991.98: {
-//           spaceBetween: 0,
-//           slidesPerView: 3,
-//         },
-//         767.98: {
-//           spaceBetween: 0,
-//           slidesPerView: 3,
-//         },
-//         479.98: {
-//           spaceBetween: 10,
-//           slidesPerView: 2,
-//         },
-//         320: {
-//           spaceBetween: 0,
-//           slidesPerView: 1,
-//         },
-//       },
-//     });
-//   }
-// }
+function swiperConfigurations(selector) {
+  if (selector) {
+    new Swiper(`${selector}`, {
+      modules: [Autoplay, Navigation, Pagination],
 
-// export default swiperConfigurations;
+      navigation: {
+        nextEl: '.hero-slider__arrow--right',
+        prevEl: '.hero-slider__arrow--left',
+      },
+      pagination: {
+        el: '.hero-slider__paginations',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoHeight: true,
+    });
+  }
+}
+
+export default swiperConfigurations;

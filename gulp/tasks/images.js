@@ -17,13 +17,16 @@ export const images = () => {
     .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.noSvg)))
     .pipe(app.plugins.if(app.isBuild, avif({quality: 50})))
     .pipe(app.plugins.if(app.isBuild, app.gulp.dest(app.path.build.images)))
+
     .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.images)))
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.plugins.if(app.isBuild, webp()))
     .pipe(app.gulp.dest(app.path.build.images))
+
     .pipe(app.plugins.if(app.isBuild, app.gulp.src(app.path.src.images)))
     .pipe(app.plugins.newer(app.path.build.images))
     .pipe(app.plugins.if(app.isBuild, imagemin()))
     .pipe(app.gulp.dest(app.path.build.images))
+
     .pipe(app.plugins.browserSync.stream());
 };

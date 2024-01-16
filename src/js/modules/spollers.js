@@ -1,3 +1,5 @@
+"use strict";
+
 export function spollersInit() {
    const spollersArray = document.querySelectorAll('[data-spollers]');
    if (spollersArray.length > 0) {

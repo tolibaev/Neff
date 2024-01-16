@@ -1,9 +1,6 @@
 'use strict';
 
-import { setInertAttributeWhenOpenPopup, removeInertAttributeWhenOpenPopup } from './functions/toggleInertAttributeWhenOpenPopup.js';
-import { conditionForToggleClassOfMenuBurger } from './functions/menuBurger.js';
-
-function Popup() {
+export function popup() {
   const popupLinks = document.querySelectorAll('._popup-link');
   const body = document.querySelector('body');
   const lockPaddings = document.querySelectorAll('._lock-padding');
@@ -37,7 +34,6 @@ function Popup() {
     popupCloseIcons.forEach(popupCloseIcon => {
       popupCloseIcon.onclick = event => {
         popupClose(event.target.closest('.popup'));
-        removeInertAttributeWhenOpenPopup();
       };
     });
   }
@@ -58,10 +54,6 @@ function Popup() {
           popupClose(event.target.closest('.popup'));
         }
       });
-
-      removeClassFromMenu('.menu-icon');
-      setInertAttributeWhenOpenPopup();
-      conditionForToggleClassOfMenuBurger();
     }
   }
 
@@ -71,7 +63,6 @@ function Popup() {
       if (doUnlock) {
         bodyUnlock();
       }
-      removeInertAttributeWhenOpenPopup();
     }
   }
 
@@ -119,5 +110,3 @@ function removeClassFromMenu(selector) {
   const menuIcon = document.querySelector(`${selector}`);
   menuIcon.classList.remove('_active');
 }
-
-export default Popup;

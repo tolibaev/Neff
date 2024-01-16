@@ -1,3 +1,5 @@
+"use strict";
+
 function useDynamicAdapt(type = 'max') {
   const className = '_dynamic_adapt_';
   const attrName = 'data-da';

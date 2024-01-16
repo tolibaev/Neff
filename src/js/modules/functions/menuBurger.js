@@ -1,10 +1,11 @@
-export function menuBurger() {
-  const menuIcon = document.querySelector('.menu-icon'),
-    menu = document.querySelector('.menu'),
-    body = document.querySelector('body'),
-    header = document.querySelector('.header');
+'use strict';
 
-  const scrollWidth = window.innerWidth - document.querySelector('.wrapper').offsetWidth;
+export function menuBurger() {
+  const header = document.querySelector('.header'),
+    menu = header.querySelector('.menu'),
+    menuIcon = header.querySelector('.menu-icon');
+
+  const body = document.querySelector('body');
 
   menuIcon.onclick = toggleClass;
 
@@ -15,7 +16,6 @@ export function menuBurger() {
     menuIcon.classList.toggle('_active');
     menu.classList.toggle('_active');
     body.classList.toggle('_lock');
-    setPaddingRight();
   }
 
   function callback(entries, observer) {
@@ -23,14 +23,6 @@ export function menuBurger() {
       header.classList.remove('_scroll');
     } else {
       header.classList.add('_scroll');
-    }
-  }
-
-  function setPaddingRight() {
-    if (menuIcon.classList.contains('_active')) {
-      menuIcon.style.marginRight = scrollWidth + 'px';
-    } else {
-      menuIcon.style.marginRight = '0px';
     }
   }
 }

@@ -1,3 +1,5 @@
+'use strict';
+
 // const api = 'https://c4c3befbdd119920.mokky.dev/cities';
 
 // function search(inputClass) {

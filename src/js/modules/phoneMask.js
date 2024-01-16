@@ -1,3 +1,5 @@
+"use strict";
+
 function phoneMask() {
 	const mask = (selector) => {
 		function setMask() {

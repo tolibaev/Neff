@@ -1,5 +1,163 @@
-<div class="popup" id="popup" role="dialog" aria-modal="true">
+<div class="popup" id="header-popup" role="dialog" aria-modal="true">
 	<div class="popup__body">
-		
+		<div class="application popup__content">
+			<button class="application__close-button _close-popup button--hover">
+				<svg class="fig">
+					<use xlink:href="./../img/sprite.svg#popup-close-icon"></use>
+				</svg>
+			</button>
+			<div class="application__title">Заявка</div>
+			<form class="form-application" action="#!" data-spollers method="post">
+				<div class="checks-block">
+					<div class="checks-block__item">
+						<div class="checks-block__top">
+							<label class="popup-label">
+								<input class="popup-label__input _visiualy-hidden" type="checkbox" checked><span></span>
+							</label>
+							<button class="checks-block__tultip" type="button">i</button>
+							<div class="tultip">
+								<div class="tultip__title">Лофт</div>
+								<p class="tultip__text">Стиль loft – одно из наиболее популярных направлений в дизайне, зародившееся в 40-х годах XX века в Нью-Йорке, когда мансардные помещения над
+									заводскими цехами превращали в полноценные жилые пространства. Кухонные интерьеры с индустриальным оформлением ранее были достоянием небогатых творческих людей. Сегодня
+									кухни лофт выбирают обеспеченные ценители оригинальных идей, а само направление дизайна считается богемным.</p>
+							</div>
+						</div>
+						<p class="checks-block__text">Бесплатный дизайн-проект</p>
+					</div>
+					<div class="checks-block__item">
+						<div class="checks-block__top">
+							<label class="popup-label">
+								<input class="popup-label__input _visiualy-hidden" type="checkbox"><span></span>
+							</label>
+							<button class="checks-block__tultip" type="button">i</button>
+							<div class="tultip">
+								<div class="tultip__title">Лофт</div>
+								<p class="tultip__text">Стиль loft – одно из наиболее популярных направлений в дизайне, зародившееся в 40-х годах XX века в Нью-Йорке, когда мансардные помещения над
+									заводскими цехами превращали в полноценные жилые пространства. Кухонные интерьеры с индустриальным оформлением ранее были достоянием небогатых творческих людей. Сегодня
+									кухни лофт выбирают обеспеченные ценители оригинальных идей, а само направление дизайна считается богемным.</p>
+							</div>
+						</div>
+						<p class="checks-block__text">Бесплатный дизайн-проект</p>
+					</div>
+				</div>
+				<div class="form-application__item">
+					<label class="form-application__label" for="inputName">Имя</label>
+					<input class="form-application__input _req" id="inputName" type="text" placeholder="Ваше имя">
+				</div>
+				<div class="form-application__item">
+					<label class="form-application__label" for="inputTel">Телефон</label>
+					<input class="form-application__input _req" id="inputTel" type="text" placeholder="+7 (000) 000-00-00">
+				</div>
+				<div class="form-application__item">
+					<label class="form-application__label">Город</label>
+					<div class="dropdown">
+						<button class="dropdown__button" data-value="Moscow" type="button">
+							<span>Москва</span>
+							<svg class="dropdown__icon">
+								<use xlink:href="./img/sprite.svg#arrows"></use>
+							</svg>
+						</button>
+						<ul class="dropdown__list">
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Saint Petersburg">Санкт-Петербург</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Kazan">Казань</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Yekaterinburg">Екатеринбург</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Nizhny Novgorod">Нижний Новгород</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Sochi">Сочи</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Rostov-on-Don">Ростов-на-Дону</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Krasnoyarsk">Красноярск</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Vladivostok">Владивосток</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Kaliningrad">Калининград</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Moscow">Москва</button></li>
+						</ul>
+						<input class="dropdown__input _visiualy-hidden _req" type="text" value="Moscow">
+					</div>
+				</div>
+				<button class="form-application__spoller-button" type="button" data-spoller>ДОПОЛНИТЕЛЬНО</button>
+				<div class="form-application__spoller-body">
+					<label class="form-application__label" for="textArea">Комментарий</label>
+					<textarea class="form-application__textarea" placeholder="Укажите размеры, желаемы стиль и т.д."></textarea>
+					<div class="file">
+						<input class="file__input" type="file" id="file" accept=".jpg, .jpeg, .gif, .png, .webp, .avif">
+						<button class="file__button" type="button">
+							<svg class="file__icon">
+								<use xlink:href="./img/sprite.svg#clip"></use>
+							</svg>
+							Загрузить файлы
+						</button>
+						<div class="file__preview" id="formPreview"></div>
+					</div>
+				</div>
+				<div class="form-bottom">
+					<label class="popup-label">
+						<input class="popup-label__input _visiualy-hidden _req" type="checkbox" checked><span></span>
+					</label>
+					<p class="form-bottom__text">Согласен с обработкой персональных данных в соответствии с <a href="#!">Лицензионным соглашением</a></p>
+				</div>
+				<button class="form-bottom__button button">Отправить заявку</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="popup" id="hero-popup" role="dialog" aria-modal="true">
+	<div class="popup__body">
+		<div class="credit application popup__content">
+			<button class="credit__close-button _close-popup">
+				<svg>
+					<use xlink:href="./../img/sprite.svg#hero-icon"></use>
+				</svg>
+				<span>Назад</span>
+			</button>
+			<div class="application__title">Кухня в кредит</div>
+
+			<p class="credit__text">
+				Рассрочка — кредит без переплаты. Мебельная фабрика «Мария» предлагает купить мебель в кредит. Вместе с нашими партнерами мы разработали предложение, которое поможет клиентам
+				быстро и выгодно осуществить идеи по ремонту. Кредит без переплаты позволяет приобрести мебель на заказ прямо сейчас, а рассчитаться за нее посильными платежами.
+			</p>
+			<p class="credit__text">
+				Мечта о новой мебели легко воплощается с удобными кредитными программами, которые действуют во всех Кухонных студиях «Мария».
+			</p>
+			<a class="credit__link" href="#!">Подробнее</a>
+			<form class="form-application" action="#!" data-spollers method="post">
+				<div class="form-application__item">
+					<label class="form-application__label" for="inputName">Имя</label>
+					<input class="form-application__input _req" id="inputName" type="text" placeholder="Ваше имя">
+				</div>
+				<div class="form-application__item">
+					<label class="form-application__label" for="inputTel">Телефон</label>
+					<input class="form-application__input _req" id="inputTel" type="text" placeholder="+7 (000) 000-00-00">
+				</div>
+				<div class="form-application__item">
+					<label class="form-application__label">Город</label>
+					<div class="dropdown">
+						<button class="dropdown__button" data-value="Moscow" type="button">
+							<span>Москва</span>
+							<svg class="dropdown__icon">
+								<use xlink:href="./img/sprite.svg#arrows"></use>
+							</svg>
+						</button>
+						<ul class="dropdown__list">
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Saint Petersburg">Санкт-Петербург</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Kazan">Казань</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Yekaterinburg">Екатеринбург</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Nizhny Novgorod">Нижний Новгород</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Sochi">Сочи</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Rostov-on-Don">Ростов-на-Дону</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Krasnoyarsk">Красноярск</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Vladivostok">Владивосток</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Kaliningrad">Калининград</button></li>
+							<li class="dropdown__list-item"><button class="dropdown__list-button" type="button" data-value="Moscow">Москва</button></li>
+						</ul>
+						<input class="dropdown__input _visiualy-hidden _req" type="text" value="Moscow">
+					</div>
+				</div>
+				<div class="form-bottom">
+					<label class="popup-label">
+						<input class="popup-label__input _visiualy-hidden _req" type="checkbox" checked><span></span>
+					</label>
+					<p class="form-bottom__text">Согласен с обработкой персональных данных в соответствии с <a href="#!">Лицензионным соглашением</a></p>
+				</div>
+				<button class="form-bottom__button button">Отправить заявку</button>
+			</form>
+		</div>
 	</div>
 </div>

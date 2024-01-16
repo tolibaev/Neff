@@ -1,3 +1,5 @@
+'use strict';
+
 function removeClasssFromNodes(className, ...nodes) {
   nodes.forEach(node => {
     node.forEach(element => {

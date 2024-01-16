@@ -125,7 +125,6 @@
 	}
 	&:focus-visible {
 		outline: none;
-		border: 1px solid oklch(0% 0 0);
 	}
 }
 :where(input) {
@@ -134,8 +133,10 @@
 	}
 	&:focus-visible {
 		outline: none;
-		border: 1px solid oklch(0% 0 0);
 	}
+}
+:where(label) {
+	display: block;
 }
 :where(
 		input[type="search"]::-webkit-search-cancel-button,

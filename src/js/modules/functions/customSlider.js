@@ -1,3 +1,5 @@
+'use strict';
+
 export function customSlider(config = {}, scrollableObject) {
   if (config.prev && config.next) {
     const prevButton = document.querySelector(`${config.prev}`);

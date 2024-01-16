@@ -1,3 +1,5 @@
+'use strict';
+
 // function labelsCheck(nodeList, count) {
 //   let counter = count;
 //   nodeList.forEach(label => {

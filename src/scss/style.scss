@@ -1,14 +1,17 @@
 @charset 'UTF-8';
 @import "./modules/reset";
-// @import "./modules/fonts";
+@import "./modules/fonts";
 
 //=============================================================================================================================================
 @import "./modules/vars";
 
-$maxWidthContainer: 1216;
-$containerPadding: 20;
+$maxWidthContainer: 1520;
+$containerPadding: 12;
 $maxWidthLayout: 1920;
 
+$fontFamily: Segoe;
+$m: Montserrat, Arial, Helvetica, sans-serif;
+$s: SangBleu, Arial, Helvetica, sans-serif;
 @import "./modules/mixins";
 
 //=============================================================================================================================================
@@ -16,15 +19,17 @@ $maxWidthLayout: 1920;
 body {
 	font-family: $fontFamily, Arial, Helvetica, sans-serif;
 	color: $color;
-	// @include adaptiveValue(font-size, 20, 16, $maxWidthContainer, $mobile);
+	font-size: toRem(14);
+	line-height: 150%;
 }
 
 @import "./modules/containers";
 @import "./modules/base";
 @import "./modules/fragments";
-// @import "./modules/popup";
-// @import "./modules/dropdown";
+@import "./modules/popup";
+@import "./modules/dropdown";
 //=============================================================================================================================================
 @import "./blocks/header";
+@import "./blocks/hero";
 
 @import "./blocks/footer";

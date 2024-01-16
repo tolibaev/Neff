@@ -1,0 +1,85 @@
+.title {
+	font-family: $s;
+	text-transform: uppercase;
+	line-height: 146%;
+	color: $dark;
+	@include adaptiveValue(font-size, 84, 28, $maxWidthLayout, 320);
+}
+
+.button {
+	border-radius: toRem(10);
+	background-color: $green;
+	min-height: toRem(50);
+
+	white-space: nowrap;
+
+	text-transform: uppercase;
+	line-height: 114%;
+	font-weight: 600;
+	color: $white;
+	letter-spacing: toRem(0.4);
+	font-size: toRem(12);
+
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: toRem(16);
+
+	@media (any-hover: hover) {
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: $greenHover;
+		}
+	}
+	&--transparent {
+		background-color: transparent;
+		border: toRem(1) solid $green;
+		color: $green;
+		@media (any-hover: hover) {
+			transition:
+				background-color 0.3s,
+				color 0.3s;
+			&:hover {
+				background-color: $green;
+				color: $white;
+			}
+		}
+	}
+	&--hover {
+		transition: scale 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				scale: 1.05;
+			}
+		}
+		&:active {
+			scale: 0.95;
+		}
+	}
+}
+
+.logo {
+	position: relative;
+	z-index: 60;
+
+	font-family: "Amaranth", sans-serif;
+	display: inline-flex;
+	flex-direction: column;
+	@include adaptiveValue(row-gap, 8, 3, $maxWidthContainer, 320);
+	// .logo__main
+	&__main {
+		color: $green;
+		@include adaptiveValue(font-size, 38, 32, $maxWidthContainer, 320);
+		text-transform: uppercase;
+	}
+	// .logo__description
+	&__description {
+		color: oklch(46.04% 0 0);
+		font-family: $m;
+		font-weight: 500;
+		font-style: italic;
+		font-size: toRem(10);
+
+		white-space: nowrap;
+	}
+}

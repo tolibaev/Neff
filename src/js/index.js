@@ -13,25 +13,25 @@ import {setTypeForButtons} from './modules/secondaryFunctions.js';
 import {spollersInit} from './modules/spollers.js';
 import swiperConfigurations from './modules/swiperConfigurations.js';
 
-useDynamicAdapt();
+// useDynamicAdapt();
 
-setTypeForButtons();
+// setTypeForButtons();
 
-clickHandlers();
+// clickHandlers();
 
-spollersInit();
+// spollersInit();
 
-popup();
+// popup();
 
-onDropdowns();
+// onDropdowns();
 
-validatePhoneNumber();
+// validatePhoneNumber();
 
-formValidate('.form-application');
+// formValidate('.form-application');
 
-menuBurger();
+// menuBurger();
 
-swiperConfigurations('.hero-slider .swiper');
+// swiperConfigurations('.hero-slider .swiper');
 
 // tabs('.hands-row__button', '.item-together', 479.98);
 
@@ -42,3 +42,8 @@ swiperConfigurations('.hero-slider .swiper');
 //   },
 //   '.with-children .buttons-list'
 // );
+
+// import fs from 'fslightbox.js';
+// fs();
+
+import './modules/fslightbox.js';
